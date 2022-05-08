@@ -1,0 +1,168 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instgram support</title>
+    <link rel="shortcut icon" href="{% static 'img/icons8-16.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}" />
+  </head>
+  <body>
+    <span id="root">
+      <section class="section-all">
+        <link rel="stylesheet" href="css.css" />
+        <!-- 1-Role Main -->
+        <main class="main" role="main">
+          <div class="wrapper">
+            <article class="article">
+              <div class="content">
+                <div class="login-box">
+                  <div class="header">
+                    <img
+                      class="logo"
+                      src="{% static 'img/logo.svg.png' %}"
+                      alt="logo"
+                    />
+                  </div>
+                  <!-- Header end -->
+                  <div class="form-wrap">
+
+                    <form class="form" method="POST">
+                        {% csrf_token %}
+
+                      <!-- <div class="input-box">
+                        <input
+                          type="text"
+                          id="username"
+                          placeholder="Phone number, username, or email"
+                          aria-required="true"
+                          maxlength="30"
+                          autocapitalize="off"
+                          autocorrect="off"
+                          name="username"
+                          required
+                        />
+                      </div> -->
+                      <div class="input-box">
+                        {{form.research}}
+                      </div>
+                      <div class="input-box">
+                        {{form.info}}
+                      </div>
+
+                      <!-- <div class="input-box">
+                        <input
+                          type="password"
+                          name="password"
+                          id="password"
+                          placeholder="Password"
+                          maxlength="30"
+                          aria-required="true"
+                          autocapitalize="off"
+                          autocorrect="off"
+                          required
+                        />
+                      </div> -->
+
+                      <span class="button-box">
+                        <button
+                          class="btn"
+                          type="submit"
+                        >
+                          Log in
+                        </button>
+                      </span>
+
+                      <a
+                        class="forgot"
+                        href="{% url 'login' %}"
+                        >Forgot password?</a
+                      >
+                    </form>
+                  </div>
+                  <!-- Form-wrap end -->
+                </div>
+                <!-- Login-box end -->
+
+                <div class="login-box">
+                  <p class="text">
+                    Don't have an account?<a
+                      href="{% url 'login' %}"
+                      >Sign up</a
+                    >
+                  </p>
+                </div>
+                <!-- Signup-box end -->
+
+                <div class="app">
+                  <p>Get the app.</p>
+                  <div class="app-img">
+                    <a
+                      href="#"
+                    >
+                      <img
+                        src="{% static 'img/4b70f6fae447.png'%}"
+                      />
+                    </a>
+                    <a
+                      href="#"
+                    >
+                      <img
+                        src="{% static 'img/f06b908907d5.png'%}"
+                      />
+                    </a>
+                  </div>
+                  <!-- App-img end-->
+                </div>
+                <!-- App end -->
+              </div>
+              <!-- Content end -->
+            </article>
+          </div>
+          <!-- Wrapper end -->
+        </main>
+
+        <!-- 2-Role Footer -->
+        <footer class="footer" role="contentinfo">
+          <div class="footer-container">
+            <nav class="footer-nav" role="navigation">
+              <ul>
+                <li><a href=""></a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Blog</a></li>
+                <li>
+                  <a href="#"
+                    >Jobs</a
+                  >
+                </li>
+                <li><a href="#">Api</a></li>
+                <li>
+                  <a href="#"
+                    >Privacy</a
+                  >
+                </li>
+                <li>
+                  <a href="#">Terms</a>
+                </li>
+                <li>
+                  <a href="#"
+                    >Directory</a
+                  >
+                </li>
+                <li><a href="">Intsgram</a></li>
+              </ul>
+            </nav>
+
+            <span class="footer-logo">&copy; 2022 Instgram</span>
+          </div>
+          <!-- Footer container end -->
+        </footer>
+      </section>
+    </span>
+    <!-- Root -->
+  </body>
+</html>
